@@ -125,13 +125,6 @@ app.post("/todos/", async (request, response) => {
 
 // Update Todo API
 
-const isStatusPropertyUpdate = (requestBody) => {
-  return requestBody.status !== undefined;
-};
-const isPriorityPropertyUpdate = (requestBody) => {
-  return requestBody.priority !== undefined;
-};
-
 app.put("/todos/:todoId/", async (request, response) => {
   const { todoId } = request.params;
   const requestBody = request.body;
